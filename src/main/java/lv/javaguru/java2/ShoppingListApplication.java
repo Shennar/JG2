@@ -1,16 +1,8 @@
 package lv.javaguru.java2;
 
-import lv.javaguru.java2.console.configs.SpringConsoleConfig;
-import lv.javaguru.java2.console.views.AddProductView;
-import lv.javaguru.java2.console.views.ProgramExitView;
-import lv.javaguru.java2.console.views.RemoveProductView;
-import lv.javaguru.java2.console.views.ShowProductListView;
-import lv.javaguru.java2.console.views.View;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class ShoppingListApplication {
@@ -22,7 +14,9 @@ public class ShoppingListApplication {
         // 3. Print shopping list to console
         // 4. Exit
 
-                                                        +        List<Product> products = new ArrayList<>();
+
+        List<Product> products = new ArrayList<>();
+
         while (true) {
             printProgramMenu();
             int menuItem = getFromUserMenuItemToExecute();
